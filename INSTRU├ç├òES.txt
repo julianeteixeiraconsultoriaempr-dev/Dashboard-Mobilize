@@ -1,0 +1,101 @@
+═══════════════════════════════════════════════════════════════
+  DASHBOARD MOBILIZE - INSTRUÇÕES DE DEPLOY NO VERCEL
+═══════════════════════════════════════════════════════════════
+
+✅ STEP 1: DESCOMPACTAR O ZIP
+
+1. Baixe o arquivo "dashboard-mobilize-kit.zip"
+2. Clique com botão direito → "Extrair Aqui" (ou "Extrair")
+3. Uma pasta chamada "dashboard-mobilize-kit" será criada
+
+✅ STEP 2: FAZER UPLOAD NO GITHUB
+
+1. Acesse https://github.com (logado)
+2. Clique em "+" (canto superior direito)
+3. Clique em "New repository"
+
+4. Preencha assim:
+   - Repository name: dashboard-mobilize
+   - Description: Dashboard de Acompanhamento - Clínica Mobilize
+   - Visibilidade: Público
+   - Marque "Add a README file"
+   - Clique "Create repository"
+
+5. Você está dentro do repositório vazio. Agora:
+   - Clique em "Add file" → "Upload files"
+   - ARRASTE TODOS os arquivos da pasta descompactada para aqui
+   - OU clique "choose your files" e selecione todos
+
+6. Deixe a mensagem de commit padrão e clique "Commit changes"
+
+✅ STEP 3: CONECTAR COM VERCEL
+
+1. Acesse https://vercel.com (logado)
+2. Clique "Add New" → "Project"
+3. GitHub vai pedir permissão (autorize)
+4. Procure o repositório "dashboard-mobilize" 
+5. Clique nele
+
+6. Na página de configuração:
+   - Framework: React ✓
+   - Root Directory: deixe em branco
+   - Build Command: npm run build (deixe padrão)
+   - Output: dist (deixe padrão)
+
+7. Clique em "Deploy" (botão azul grande)
+
+✅ STEP 4: ESPERAR O DEPLOY
+
+- Vercel vai processar (2-3 minutos)
+- Vai mostrar logs técnicos (não se preocupe)
+- Quando terminar, verá um checkmark ✅
+- Uma URL será gerada: https://dashboard-mobilize.vercel.app
+
+🎉 PRONTO! SEU DASHBOARD ESTÁ ONLINE!
+
+═══════════════════════════════════════════════════════════════
+
+📝 COMO ATUALIZAR DADOS MENSALMENTE:
+
+1. Vá para seu repositório no GitHub
+2. Abra a pasta "src" 
+3. Clique no arquivo "App.jsx"
+4. Clique no lápis (✏️) para editar
+5. Procure por:
+
+   const financeiro = {
+     faturamento: 18500,         ← MUDE PARA NOVO VALOR
+     faturamentoPrev: 20000,     ← MUDE META SE NECESSÁRIO
+     inadimplencia: 4.2,         ← ATUALIZE
+     ocupacao: 72,               ← ATUALIZE
+     ...
+   }
+
+6. Faça as mudanças dos seus números reais
+7. Scroll para baixo → "Commit changes"
+8. Vercel atualiza automaticamente! ✨
+
+═══════════════════════════════════════════════════════════════
+
+❓ PERGUNTAS FREQUENTES:
+
+P: Meu repositório aparece privado?
+R: Volte para ele, clique em Settings → Change to public
+
+P: Quero mudar as cores do dashboard?
+R: No arquivo App.jsx, procure por color: '#2E75B6' e mude
+
+P: Quero adicionar mais gráficos?
+R: Edite o App.jsx. Copie uma seção de gráfico e adapte.
+
+P: Posso fazer uma senha no dashboard?
+R: Sim, mas é um recurso pago. Por enquanto deixa público.
+
+═══════════════════════════════════════════════════════════════
+
+📞 PRECISA DE AJUDA?
+
+Se travar em algum passo, tire screenshot e mande!
+Qual foi o erro exato? Qual é o passo que não conseguiu?
+
+═══════════════════════════════════════════════════════════════
